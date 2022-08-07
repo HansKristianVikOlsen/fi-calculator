@@ -50,7 +50,7 @@ const Calculator = () => {
         // const howLongItTakesWithoutBuying = totalSavings + montlyInvestments
     }
 
-    const handleChange = (event: React.ChangeEvent<HTMLInputElement>, setter:any) => {
+    const handleChange = (event: any, setter:any) => {
         setter(parseInt(event.target.value));
       };
 
@@ -62,8 +62,8 @@ const Calculator = () => {
     // calculate(totalSavings);
     // calculate(totalSavings-costOfWhatYouWantToBuy)
     return <Wrapper>
-        <TextField id="standard-basic" label="Total savings" variant="standard"  onChange={(e) => handleChange(e, setTotalSavings)} defaultValue={totalSavings}/>
-        <TextField id="standard-basic" label="Savings goal" variant="standard" onChange={(e) => handleChange(e, setSavingsGoal)} defaultValue={savingsGoal} />
+        <TextField id="standard-basic" label="Total savings" variant="standard"  onChange={(e:any) => handleChange(e, setTotalSavings)} defaultValue={totalSavings}/>
+        <TextField id="standard-basic" label="Savings goal" variant="standard" onChange={(e:any) => handleChange(e, setSavingsGoal)} defaultValue={savingsGoal} />
         <TextField id="standard-basic" onChange={(e) => handleChange(e, setMontlyInvestments)} label="Monthly investments" variant="standard"  defaultValue={montlyInvestments}/>
     <TextField id="standard-basic" onChange={(e) => handleChange(e, setCostOfWhatYouWantToBuy)} label="Cost of what you want to buy" variant="standard" defaultValue={costOfWhatYouWantToBuy}/>
     <span>FIRE LOSS: {fireLoss} Months / {fireLoss/12} Years</span></Wrapper>
