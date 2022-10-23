@@ -52,5 +52,5 @@ jobs:
         with:
           app-name: 'fi-calculator'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_1CAA7252A2D4466386222D155ECE6A4D }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_3F0658B4829C4206B4C7B822C2DE5271 }}
           package: .
